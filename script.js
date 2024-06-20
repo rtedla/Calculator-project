@@ -22,7 +22,6 @@ function divide(a, b) {
   return parseFloat(a) / parseFloat(b);
 }
 
-
 function operate(operator, a, b) {
   switch (operator) {
     case '+':
@@ -37,7 +36,6 @@ function operate(operator, a, b) {
       return 'Error: Invalid operator';
   }
 }
-
 
 function updateDisplay(value) {
   document.querySelector('.display').textContent = value;

@@ -50,3 +50,40 @@ function clearDisplay() {
   result = '';
   updateDisplay('0');
 }
+
+document.querySelectorAll('.number').forEach(button => {
+  button.addEventListener('click', () => {
+    if (!operator) {
+      firstNumber += button.value;
+      updateDisplay(firstNumber);
+    } else {
+      secondNumber += button.value;
+      updateDisplay(secondNumber);
+    }
+  });
+});
+
+document.querySelectorAll('.operator').forEach(button => {
+  button.addEventListener('click', () => {
+    if (!firstNumber) return;
+    if (operator && secondNumber) {
+      result = operate(operator, firstNumber, secondNumber);
+      updateDisplay(result);
+      firstNumber = result;
+      secondNumber = '';
+    }
+    operator = button.value;
+  });
+});
+
+document.querySelector('.equals').addEventListener('click', () => {
+  if (firstNumber && operator && secondNumber) {
+    result = operate(operator, firstNumber, secondNumber);
+    updateDisplay(result);
+    firstNumber = result;
+    secondNumber = '';
+    operator = '';
+  }
+});
+
+document.querySelector('.clear').addEventListener('click', clearDisplay);

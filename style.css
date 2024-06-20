@@ -21,3 +21,11 @@ button {
   border: none;
   cursor: pointer;
 }
+
+button:hover {
+  background-color: #ccc;
+}
+
+.clear, .equals {
+  grid-column: span 2;
+}

@@ -6,3 +6,10 @@
   margin: auto;
   padding: 10px;
 }
+
+.display {
+  grid-column: span 4;
+  text-align: right;
+  padding: 10px;
+  background-color: #f0f0f0;
+}

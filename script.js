@@ -14,3 +14,8 @@ function subtract(a, b) {
 function multiply(a, b) {
   return parseFloat(a) * parseFloat(b);
 }
+
+function divide(a, b) {
+  if (parseFloat(b) === 0) {
+    return 'Error: Cannot divide by zero';
+  }

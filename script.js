@@ -37,3 +37,16 @@ function operate(operator, a, b) {
       return 'Error: Invalid operator';
   }
 }
+
+
+function updateDisplay(value) {
+  document.querySelector('.display').textContent = value;
+}
+
+function clearDisplay() {
+  firstNumber = '';
+  operator = '';
+  secondNumber = '';
+  result = '';
+  updateDisplay('0');
+}

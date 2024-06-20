@@ -19,3 +19,5 @@ function divide(a, b) {
   if (parseFloat(b) === 0) {
     return 'Error: Cannot divide by zero';
   }
+  return parseFloat(a) / parseFloat(b);
+}
